@@ -44,9 +44,8 @@ function handleRollMovement(event) {
 }
 
 function handleRollEnd() {
-  rollYAxis = undefined;
   frame = Number(cup.dataset.frame);
-  if (frame === TOTAL_FRAMES) {
+  if (frame === TOTAL_FRAMES && rollYAxis) {
     primary.textContent = "Congrats!";
     const randomPrize = PRIZES[Math.floor(Math.random() * PRIZES.length)];
     prize.src = `images/${randomPrize.image}.png`;
@@ -54,6 +53,7 @@ function handleRollEnd() {
     // hide cup, show confetti and prize
     [cup, confetti, prize].forEach(image => image.classList.toggle("hidden"));
   }
+  rollYAxis = undefined;
 }
 
 cup.addEventListener("mousedown", handleRollStart);
