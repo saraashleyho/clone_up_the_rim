@@ -31,10 +31,9 @@ body {
     ),
     #a5051f;
   height: 100vh;
+  overflow: hidden;
   color: white;
   text-align: center;
-  touch-action: none;
-  overflow: hidden;
   animation: fadeIn 1s;
 }
 
