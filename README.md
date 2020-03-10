@@ -4,11 +4,11 @@ Roll Up the Rim was a huge initiative for our team in 2020.  For context, see so
 
 ## Objective
 
-Students will be able to...
+Students will be able to manipulate the DOM with JavaScript, allowing the user to interact with the page to win a prize.  
 
 ## Explanation
 
-What is the goal?
+The HTML and CSS needed for the final product is already written -- do not alter them!  You should be doing all of your work in the `game.js` file.
 
 ##### Your task is to take the page from this:
 
@@ -20,7 +20,7 @@ What is the goal?
 
 ## Implementation Details
 
-You are going to have to write some code!
+- The trick to getting the cup to animate is to understand the concept of a [CSS Sprite](https://css-tricks.com/css-sprites/).  In this case, we have a very long image called `gameplay-sprite.png` in the images folder.
 
 ## Key Skills
 
