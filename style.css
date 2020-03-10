@@ -17,6 +17,11 @@
   src: url("fonts/sofia_pro_regular.otf");
 }
 
+* {
+  box-sizing: border-box;
+  touch-action: none;
+}
+
 body {
   margin: 0;
   background: linear-gradient(

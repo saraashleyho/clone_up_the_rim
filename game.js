@@ -27,7 +27,6 @@ let frame = Number(cup.dataset.frame);
 let rollYAxis;
 
 function handleRollStart(event) {
-  event.preventDefault();
   rollYAxis = event.pageY;
 }
 
