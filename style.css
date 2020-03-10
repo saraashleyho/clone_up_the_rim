@@ -1,0 +1,99 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: sofiabold;
+  src: url("fonts/sofia_pro_bold.otf");
+}
+
+@font-face {
+  font-family: sofiaregular;
+  src: url("fonts/sofia_pro_regular.otf");
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(
+      rgba(213, 24, 55, 0) 0%,
+      rgba(213, 24, 55, 1),
+      rgba(213, 24, 55, 0) 80%
+    ),
+    radial-gradient(
+      circle farthest-side,
+      rgba(213, 24, 55, 1) 30%,
+      rgba(213, 24, 55, 0) 100%
+    ),
+    #a5051f;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  touch-action: none;
+  overflow: hidden;
+  animation: fadeIn 1s;
+}
+
+#primary {
+  font-family: sofiabold, sans-serif;
+}
+
+#secondary {
+  max-width: 300px;
+  margin: 0 auto;
+  font-family: sofiaregular, sans-serif;
+}
+
+main {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#cup {
+  width: 360px;
+  height: 540px;
+  margin: 0 auto;
+  background-size: cover;
+  cursor: grab;
+  background-image: url(images/gameplay-sprite.png);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-out;
+}
+
+#cup.hidden {
+  opacity: 0;
+  transform: scale(0.3) translateY(100%);
+}
+
+#confetti {
+  transform: scale(1) translateY(0);
+  transition: opacity 1s ease-in, transform 1s ease-out;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+#confetti.hidden {
+  opacity: 0;
+  transform: scale(0.3) translateY(-50%);
+}
+
+#prize {
+  margin-top: 100px;
+  max-width: 360px;
+  transform: scale(1);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in-out;
+}
+
+#prize.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.3);
+}
