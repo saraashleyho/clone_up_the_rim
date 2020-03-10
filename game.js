@@ -24,12 +24,10 @@ const PRIZES = [
 ];
 
 let frame = Number(cup.dataset.frame);
-let rolling = false;
 let rollStartY;
 
 function handleRollStart(event) {
   event.preventDefault();
-  rolling = true;
   // mouse uses screenY and touch uses pageY
   rollStartY = event.screenY || event.pageY;
 }
@@ -38,9 +36,9 @@ function handleRollMovement(event) {
   frame = Number(cup.dataset.frame);
   const rollY = event.screenY || event.pageY;
   if (
-    rolling &&
-    frame < TOTAL_FRAMES &&
-    rollStartY - rollY >= FRAME_CHANGE_THRESHOLD
+    rollStartY &&
+    rollStartY - rollY >= FRAME_CHANGE_THRESHOLD &&
+    frame < TOTAL_FRAMES
   ) {
     rollStartY = rollY;
     cup.dataset.frame++;
@@ -48,7 +46,7 @@ function handleRollMovement(event) {
 }
 
 function handleRollEnd() {
-  rolling = false;
+  rollStartY = undefined;
   frame = Number(cup.dataset.frame);
   if (frame === TOTAL_FRAMES && !cup.classList.contains("hidden")) {
     primary.textContent = "Congrats!";
