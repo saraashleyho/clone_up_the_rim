@@ -1,6 +1,6 @@
 # Lesson Description
 
-Why are we teaching this lesson?
+Roll Up the Rim was a huge initiative for our team in 2020.  For context, see some of the (press coverage)[https://www.toronto.com/news-story/9877119-when-does-roll-up-the-rim-to-win-start-in-2020-/].
 
 ## Objective
 
