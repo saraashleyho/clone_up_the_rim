@@ -24,31 +24,29 @@ const PRIZES = [
 ];
 
 let frame = Number(cup.dataset.frame);
-let rollStartY;
+let rollYAxis;
 
 function handleRollStart(event) {
   event.preventDefault();
-  // mouse uses screenY and touch uses pageY
-  rollStartY = event.screenY || event.pageY;
+  rollYAxis = event.pageY;
 }
 
 function handleRollMovement(event) {
   frame = Number(cup.dataset.frame);
-  const rollY = event.screenY || event.pageY;
   if (
-    rollStartY &&
-    rollStartY - rollY >= FRAME_CHANGE_THRESHOLD &&
+    rollYAxis &&
+    rollYAxis - event.pageY >= FRAME_CHANGE_THRESHOLD &&
     frame < TOTAL_FRAMES
   ) {
-    rollStartY = rollY;
+    rollYAxis = event.pageY;
     cup.dataset.frame++;
   }
 }
 
 function handleRollEnd() {
-  rollStartY = undefined;
+  rollYAxis = undefined;
   frame = Number(cup.dataset.frame);
-  if (frame === TOTAL_FRAMES && !cup.classList.contains("hidden")) {
+  if (frame === TOTAL_FRAMES) {
     primary.textContent = "Congrats!";
     const randomPrize = PRIZES[Math.floor(Math.random() * PRIZES.length)];
     prize.src = `images/${randomPrize.image}.png`;

@@ -67,6 +67,7 @@ main {
 #cup.hidden {
   opacity: 0;
   transform: scale(0.3) translateY(100%);
+  pointer-events: none;
 }
 
 #confetti {
