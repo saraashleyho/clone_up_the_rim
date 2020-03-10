@@ -12,7 +12,7 @@ What is the goal?
 
 ##### Your task is to take the page from this:
 
-![Before](readme/before.gif)
+![Before](readme/before.png)
 
 ##### to this:
 

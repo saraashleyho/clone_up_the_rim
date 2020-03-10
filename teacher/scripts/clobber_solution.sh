@@ -1,3 +1,4 @@
 #!/bin/sh
 
-echo '🕵️‍♀️ Find me in teacher/scripts/clobber_solution.sh'
+rm game.js
+mv teacher/starter_files/game.js game.js
