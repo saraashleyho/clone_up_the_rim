@@ -1,4 +1,4 @@
-const FRAME_CHANGE_THRESHOLD = 30;
+const FRAME_CHANGE_THRESHOLD = 20;
 const TOTAL_FRAMES = 13;
 const PRIZES = [
   {
