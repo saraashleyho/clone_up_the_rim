@@ -20,6 +20,7 @@
 * {
   box-sizing: border-box;
   touch-action: none;
+  user-select: none;
 }
 
 body {
@@ -92,7 +93,7 @@ main {
 
 #prize {
   margin-top: 100px;
-  max-width: 360px;
+  max-width: min(600px, 90vw);
   transform: scale(1);
   transition: opacity 0.5s ease-in, transform 0.5s ease-in-out;
 }
