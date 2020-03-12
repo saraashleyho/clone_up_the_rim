@@ -1,4 +1,4 @@
-# Lesson Description
+# Clone Up The Rim
 
 Roll Up the Rim was a huge initiative for our team in 2020.  For context, see some of the [press coverage](https://www.toronto.com/news-story/9877119-when-does-roll-up-the-rim-to-win-start-in-2020-/).
 
@@ -20,13 +20,19 @@ The HTML and CSS needed for the final product is already written -- do not alter
 
 ## Implementation Details
 
-- The trick to getting the cup to animate is to understand the concept of a [CSS Sprite](https://css-tricks.com/css-sprites/).  In this case, we have a very long image called `gameplay-sprite.png` in the images folder.
+- The key to getting the cup to animate is to understand the concept of a [CSS Sprite](https://css-tricks.com/css-sprites/).  In this case, we have a very long image called `gameplay-sprite.png` in the images folder, which contains each frame of the animation.
+- If you look at the `sprite.css` file, you will see that we can display any individual frame of the sprite by giving the cup a `data-frame` attribute.  Read more about data attributes [here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes).  If you inspect the cup element with devtools, you can manually change the number from 1 to 13 and see the rim of the cup roll up and display the word "WINNER".
+- The trick is now to perform this same DOM manipulation programatically, in response to JS events.
+- We have already written 3 empty functions for you in `game.js`, and added [event listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventListener) that trigger them to run on `mousedown`, `touchdown`, `movemove`, `touchmove`, `mouseup` and `touchend`.
+- Your task is to write the body of those functions.  There are hints for you inside of each one.
 
 ## Key Skills
 
-- [HTML](https://www.w3schools.com/html/)
-- [CSS](https://www.w3schools.com/css/)
-- [JavaScript](https://www.w3schools.com/js/)
+- DOM Manipulation
+- CSS Transitions
+- CSS Animations
+- Event Listeners
+- HTML Data Attributes
 
 ## Setup Steps
 
@@ -53,13 +59,14 @@ Then the result should be...
 
 ## Resources
 
-- [HTML](https://www.w3schools.com/html/)
-- [CSS](https://www.w3schools.com/css/)
-- [JavaScript](https://www.w3schools.com/js/)
+- [CSS Sprites](https://css-tricks.com/css-sprites/)
+- [HTML Data Attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+- [Event Listeners](https://developer.mozilla.org/en-US/docs/Web/API/EventListener)
+- [MouseEvent PageY](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY)
 
 # TEACHER NOTES - Students will not see below this line
 
-Demo available at...
+Demo available at http://rbilabs.github.io/RBI-Teaching-Roll-Up-The-Rim
 
 To provision the student repo, with no previous git history:
 
@@ -69,6 +76,6 @@ To provision the student repo, with no previous git history:
 
 #### Have you?
 
-- [ ] Required 2 code reviews on this repository's `master` branch?
-- [ ] Required 2 code reviews and 1 CODEOWNER on the learning repository's `master` branch?
-- [ ] Added the `@rbilabs/rbi-learning` team to the learning repo?
+- [x] Required 2 code reviews on this repository's `master` branch?
+- [x] Required 2 code reviews and 1 CODEOWNER on the learning repository's `master` branch?
+- [x] Added the `@rbilabs/rbi-learning` team to the learning repo?
