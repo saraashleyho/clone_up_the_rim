@@ -25,17 +25,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(
-      rgba(213, 24, 55, 0) 0%,
-      rgba(213, 24, 55, 1),
-      rgba(213, 24, 55, 0) 80%
-    ),
-    radial-gradient(
-      circle farthest-side,
-      rgba(213, 24, 55, 1) 30%,
-      rgba(213, 24, 55, 0) 100%
-    ),
-    #a5051f;
+  background-color: #a5051f;
   height: 100vh;
   overflow: hidden;
   color: white;
